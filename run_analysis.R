@@ -60,6 +60,6 @@ dataset2 = separate(dataset2,type_of_measurements,into = c("measure","type_of_me
 dataset3 = dataset2 %>% group_by(subject,activity,measure,type_of_measure,dimension) %>%
               summarise(value = mean(value))
 
-write.csv(dataset3,"FinalTidySummary.csv")
+write.table(dataset3,"FinalTidySummary.txt", row.name=FALSE) 
 
 
